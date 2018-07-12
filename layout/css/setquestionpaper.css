@@ -1,0 +1,25 @@
+/*
+.first-option {
+    display: inline-block;
+}
+
+.second-option{
+    display: inline-block;
+}*/
+body{
+    margin: 0;
+    padding: 0;
+}
+.create-question{
+    padding: 24px;
+    margin: 0;
+}
+
+.added-questions-title{
+    border: black 1px solid;
+}
+
+.question{
+    height: 24px;
+    font-size: large;
+}

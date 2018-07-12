@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/registerstudents.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/registerstudents.js"></script>
+</head>
+<body>
+<div class="container-fluid col-12">
+    <nav class="navbar navbar-dark bg-dark navigation-bar col-12">
+        <a class="navbar-brand offset-1" href="#">Home</a>
+        <button type="button" class="btn btn-primary">
+            Total Entries <span class="badge badge-light">0</span>
+        </button>
+        <button type="button" class="btn btn-primary">
+            Submit
+        </button>
+    </nav>
+    <div class="row mt-4">
+        <div class="col-3 alert alert-primary text-center nameAlert" role="alert">
+            Name
+        </div>
+        <div class="col-3 alert alert-primary text-center" role="alert">
+            Login Id
+        </div>
+
+        <div class="col-3 alert alert-primary text-center" role="alert">
+            Password
+        </div>
+        <div class="ml-4">
+            <button id="addBtn" type="button" class="btn btn-outline-primary mt-2">
+                <i class="fas fa-plus-circle"></i>
+            </button>
+        </div>
+        <div class="col-1">
+            <a href="/"><button id="doneBtn" type="button" class="btn btn-outline-primary mt-2">
+                    Done
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="row ml-2">
+        <div class="col-3">
+            <input id="studentName" type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="col-3">
+            <input id="loginId" type="text" class="form-control ml-3" placeholder="Login Id">
+        </div>
+        <div class="col-3">
+            <input id="password" type="text" class="form-control ml-3" placeholder="Password">
+        </div>
+
+    </div>
+
+    <ul type="none" id="studentDetails"></ul>
+</div>
+
+</body>
+</html>

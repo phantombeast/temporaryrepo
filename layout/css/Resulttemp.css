@@ -1,0 +1,51 @@
+.navi{
+    height: 15vh;
+}
+
+.back{
+    background-color: #6a6b6d;
+    height: 70vh;
+}
+
+.foot{
+    height: 15vh;
+}
+
+.login{
+    align-self: center;
+    width: 70%;
+    height: 70vh;
+    border: 3px chocolate solid;
+    position: relative;
+    left: 15%;
+
+}
+
+.login-content{
+    border: 2px black solid;
+    height: 50vh;
+    position: relative;
+    top: 10%;
+    width: 50%;
+    left: 25%;
+
+}
+
+#login-content-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 24px;
+}
+
+#login-content-header{
+    height: 24px;
+}
+
+#marks{
+    font-size: 24pt;
+}
+
+#totalMarks{
+    font-size: 24pt;
+}

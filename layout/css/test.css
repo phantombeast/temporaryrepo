@@ -1,0 +1,23 @@
+#questionDiv{
+    margin-top:4%;
+    margin-left: 15%;
+    /*border: 2px black solid;*/
+    height: 60vh;
+    width: 70%;
+
+}
+
+#doneBtn{
+    margin-top: 2%;
+    margin-left: 18%;
+}
+
+#nextBtn{
+    margin-top: 2%;
+    margin-left: 52%;
+}
+
+#questionList{
+    margin-top: 8%;
+    margin-right: 70px;
+}

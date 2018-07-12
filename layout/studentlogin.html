@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/teacherlogin.css">
+    <script src="js/teacherlogin.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-dark bg-dark navigation-bar navi">
+        <a class="offset-1" href="#"><span style="font-size: 28px">Home</span>/Student Login</a>
+    </nav>
+    <div class="jumbotron-fluid back">
+        <div class="login">
+            <div class="login-content">
+                <nav id="navid" class="navbar bg-dark"></nav>
+                <form class="col-6 offset-3">
+                    <div class="form-group mt-3 ">
+                        <label for="exampleInputEmail1"><h4>Login Id</h4></label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Login Id">
+                    </div>
+                    <div class="form-group ">
+                        <label for="exampleInputPassword1"><h4>Password</h4></label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+
+                    <a href="/gotoQuestionPage"><button id="submitBtn" type="button" class="btn btn-primary">Submit</button></a>
+
+                </form>
+                <div class="card-footer bg-dark" id="login-content-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer bg-dark foot"></div>
+</div>
+
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

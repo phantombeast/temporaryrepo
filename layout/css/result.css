@@ -1,0 +1,37 @@
+.back{
+    background-color: #6a6b6d;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.navi{
+    height: 15vh;
+}
+
+.foot{
+    height: 15vh;
+}
+
+.outermost-div{
+    height: 70vh;
+}
+
+.result-div{
+    height: 50vh;
+    margin-top: 10vh;
+    border-left: black 2px solid;
+    border-right: black 2px solid;
+    border-bottom: black 3vh solid;
+    border-top:black 3vh solid ;
+    /*padding-bottom: 10vh;*/
+}
+
+
+.inner-div{
+    height: 30vh;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}

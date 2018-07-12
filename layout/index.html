@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navigation-bar">
+        <a class="navbar-brand offset-1" href="#">Home</a>
+    </nav>
+
+    <div class="jumbotron jumbo">
+        <div class="row row-div-outer">
+            <div class="col">
+                <div class="row row-div-inner-teacher mt-5">
+                    <div class="col"></div>
+                    <div class="col text-center" id="teacher-linker" style="position: relative">
+                        <div class="row">
+                            <div class="col teacher-logo mt-lg-4">
+                                <img src="./images/teacher.png" style="height: 160px; width:180px;">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col teacher-title text-center mt-lg-4">
+                                <h1 id="teacherHeading">TEACHER</h1>
+                            </div>
+                        </div>
+
+                        <div class="row teacherBtnRow">
+                            <div class="col">
+                                <a href="/tlogin">
+                                <button id="teacherBtn" type="button" class="btn btn-outline-dark btn-lg continue-btn">Continue</button>
+                                </a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="row row-div-inner-student mt-5">
+                    <div class="col"></div>
+                    <div class="col text-center" id="student-linker" style="position: relative">
+                        <div class="row mt-lg-4">
+                            <div class="col ">
+                                <div class="student-logo text-center">
+                                    <img src="./images/student-icon.png" style="height: 160px; width:180px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="student-title text-center mt-lg-4">
+                                    <h1 id="studentHeading">STUDENT</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row studentBtnRow" >
+                            <div class="col">
+                                <a href="/slogin"><button id="studentBtn" type="button" class="btn btn-outline-dark btn-lg continue-btn">Continue</button>
+                                </a>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="col"></div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
