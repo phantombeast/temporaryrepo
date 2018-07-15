@@ -1,9 +1,9 @@
 const sequelize = require('sequelize');
 
 const studentDb = new sequelize(
-    'studentdatabase',
-    'examadmin',
-    'adminpass',
+    'stumandb5',
+    'stumanuser5',
+    'stumanpass5',
     {
         dialect: 'mysql',
         host:'localhost'

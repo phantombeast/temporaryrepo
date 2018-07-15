@@ -1,6 +1,33 @@
 const express = require('express');
+
 const path = require('path');
+
 var server = express();
+
+
+const { User } = require('./db/dbmodel')
+const session = require('express-session')
+const passport = require('./passport')
+
+server.use(express.urlencoded({ extended: true }))
+
+server.use(express.json());
+
+server.use(express.urlencoded({extended: true}));
+
+server.use(express.static(path.join(__dirname,'layout')));
+
+
+server.use(session({
+    secret: 'some very very secret thing',
+    resave: false,
+    saveUninitialized: true
+}))
+server.use(passport.initialize())
+server.use(passport.session())
+
+
+
 
 let questions= [];
 let answers = [];
@@ -16,11 +43,6 @@ let studentResponse = [];
     return tempCorrectAnswers;
 }*/
 
-server.use(express.json());
-
-server.use(express.urlencoded({extended: true}));
-
-server.use(express.static(path.join(__dirname,'layout')));
 
 server.use('/addquestion',require('./routes/paper_router'));
 
@@ -46,7 +68,23 @@ server.get('/logintoset',(r,s)=>{
 server.get('/htos',(r,s)=>{s.redirect('/slogin')})
 
 server.get('/',(r,s)=>{
-    s.sendFile(path.join(__dirname,'/layout/indextemp.html'))
+    s.sendFile(path.join(__dirname,'/layout/admin/index.html'))
+    console.log('Homepage using get');
+})
+server.get('/index',(r,s)=>{
+    s.sendFile(path.join(__dirname,'/layout/admin/index.html'))
+    console.log('Homepage using get');
+})
+
+
+server.get('/signin.html',(r,s)=>{
+    s.sendFile(path.join(__dirname,'/layout/admin/signin.html'))
+    console.log('Homepage using get');
+})
+
+
+server.get('/signup.html',(r,s)=>{
+    s.sendFile(path.join(__dirname,'/layout/admin/signup.html'))
     console.log('Homepage using get');
 })
 
@@ -69,6 +107,21 @@ server.get('/quest',(r,s)=>{
      return s.sendFile(path.join(__dirname,'/layout/setquestionpaper.html'))
 });
 
+server.post('/signup', (req, res) => {
+    User.create({
+        username: req.body.username,
+        password: req.body.password
+    }).then((user) => {
+        if (user) {
+            res.redirect('/admin/signin.html')
+        }
+    }).catch((err) => res.send("ERROR CREATING USER"))
+})
+
+server.post('/signin', passport.authenticate('local', {
+    failureRedirect: '/admin/signin.html',
+    successRedirect: '/index.html'
+}))
 
 
 /*
@@ -125,4 +178,4 @@ server.get('/respage',(r,s)=>{
 
 
 
-server.listen(4445,()=>console.log('Server started'));
+server.listen(4445,()=>console.log('Server started at http://localhost:4445'));
