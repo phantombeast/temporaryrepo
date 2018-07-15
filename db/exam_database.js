@@ -1,8 +1,8 @@
 const sequelize = require('sequelize');
 const db = new sequelize(
-  'examdata',
-  'examiner',
-  'simplepassword',
+  'stumandb5',
+  'stumanuser5',
+  'stumanpass5',
     {
         dialect: 'mysql',
         host: 'localhost'
